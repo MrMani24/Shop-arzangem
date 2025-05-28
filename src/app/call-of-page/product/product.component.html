@@ -1,0 +1,12 @@
+<div class="product" >
+  <div class="images" >
+    <img src="/img-product/{{product.pic}}" alt="">
+  </div>
+  <div class="title1" >
+    {{product.title}}
+  </div>
+  <div class="price" >
+    {{product.price | number}} تومان
+  </div>
+  <button (click)="buy(product)" >buy</button>
+</div>

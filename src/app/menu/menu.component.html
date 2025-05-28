@@ -1,0 +1,30 @@
+<div class="a1"></div>
+<div class="menu">
+  <div class="brand">
+    <img src="/images/icon.png" alt="">
+    <div class="title"><a style="text-decoration: none; color: black;" routerLink="/Home" >ارزان جم</a></div>
+  </div>
+  <ul class="item">
+    <li><a routerLink="/Call of duty Cp">خرید سی پی</a></li>
+    <li><a href="">خرید یو سی</a></li>
+    <li><a href="">خرید جم کلش</a></li>
+    <li><a href="">قوانین</a></li>
+    <li><a href="">درباره ما</a></li>
+    <li><a href="">تماس باما</a></li>
+  </ul>
+  <ul class="item2" >
+    <li class="Tn">09120000000 📞</li>
+    <li><button class="b1" >🛒سبد خرید</button></li>
+    <li><button class="b2" (click)="ismenu = !ismenu" ><img src="/images/berger.png" ></button></li>
+  </ul>
+</div>
+@if (ismenu) {
+  <ul class="itemA">
+    <li><a href="">خرید سی پی</a></li>
+    <li><a href="">خرید یو سی</a></li>
+    <li><a href="">خرید جم کلش</a></li>
+    <li><a href="">قوانین</a></li>
+    <li><a href="">درباره ما</a></li>
+    <li><a href="">تماس باما</a></li>
+  </ul>
+}

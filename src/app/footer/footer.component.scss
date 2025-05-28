@@ -1,0 +1,45 @@
+.s1 {
+  background-color: rgb(238, 238, 238);
+  .a1 {
+    display: flex;
+    justify-content: flex-end;
+
+    div {
+      text-align: right;
+      width: 15em;
+      margin: 0% 5% 0% 2%;
+
+      label {
+        display: block;
+        padding: 2em 0em 1.5em 2em;
+        font-size: 1.3em;
+      }
+
+      img {
+        display: inline;
+        margin: 5px;
+      }
+    }
+
+    #l1::after {
+      content: "🏢";
+    }
+
+    #l2::after {
+      content: "🔗";
+    }
+
+    #l3::after {
+      content: "📞";
+    }
+  }
+  .p0 {
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    text-align: right;
+    padding: 0.5em;
+    border-top: solid 1px;
+  }
+}

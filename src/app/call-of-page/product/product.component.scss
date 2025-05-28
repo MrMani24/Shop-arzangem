@@ -1,0 +1,23 @@
+:host{
+  width: 20%;
+}
+.product{
+  display: inline-block;
+  padding: 1em;
+  .images{
+    img{
+      width: 200px;
+    }
+  }
+  .title1{
+    text-align: center;
+  }
+  .price{
+    margin-right: 1.7em;
+    color: red;
+    display: inline-block;
+  }
+  button{
+    margin-right: 2.7em;
+  }
+}

@@ -1,6 +1,7 @@
+import { Component, inject } from '@angular/core';
+import { ServiceBasketService } from '../+service/service-basket.service';
 import { DecimalPipe } from '@angular/common';
-import { Component, inject, OnInit } from '@angular/core';
-import { BasketService } from '../+service/basket.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-basket',
@@ -8,16 +9,10 @@ import { BasketService } from '../+service/basket.service';
   templateUrl: './basket.component.html',
   styleUrl: './basket.component.scss'
 })
-export class BasketComponent implements OnInit {
-basket: any[] = [];
-  basketService = inject(BasketService);
-
-  ngOnInit() {
-    this.refreshBasket(); 
+export class BasketComponent {
+  router = inject(Router)
+  rout() {
+    this.router.navigateByUrl("/Home")
   }
-
-  refreshBasket() {
-    this.basket = [...this.basketService.getBasket()];
-  }
+  basket2 = inject(ServiceBasketService)
 }
-

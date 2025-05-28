@@ -68,7 +68,16 @@
         background-color: #FB5012;
         padding-top: 10px;
         padding-bottom: 10px;
+        .n1{
+          display: inline-block;
+          position: absolute;
+          background-color: red;
+          min-width: 1.5em;
+          border-radius: 50px;
+          margin: -17px -12px 0 0 ;
+        }
       }
+
     }
 
     .Tn {
@@ -82,7 +91,8 @@
   display: none;
   background-color: #ffffff;
   border: none;
-  transform: translate(0px , -2px);
+  transform: translate(0px, -2px);
+
   img {
     width: 30px;
   }
@@ -121,17 +131,4 @@
   li:hover {
     background-color: #FB5012;
   }
-}
-
-.b1 {
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.b1:hover {
-  background-color: #0056b3;
 }

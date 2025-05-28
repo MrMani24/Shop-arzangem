@@ -1,25 +1,42 @@
-<div class="basket-container">
-  <h3>سبد خرید</h3>
-  @if (basket.length === 0) {
-    <p>سبد خرید خالی است!</p>
-  } @else {
-    <table class="basket-table">
-      <thead>
-        <tr>
-          <th>شناسه</th>
-          <th>عنوان</th>
-          <th>قیمت (تومان)</th>
-        </tr>
-      </thead>
-      <tbody>
-        @for (item of basket; track $index) {
-          <tr>
-            <td>{{item.id}}</td>
-            <td>{{item.title}}</td>
-            <td>{{item.price | number}}</td>
-          </tr>
-        }
-      </tbody>
-    </table>
+<div class="emty">
+  <p>سبد خرید</p>
+  @if (basket2.number == 0) {
+  <div>سبد خرید خالی است</div>
+  <button (click)="rout()">بازگشت به فروشگاه</button>
   }
 </div>
+@if (basket2.number > 0) {
+<table>
+  <tr class="tr1" >
+    <th></th>
+    <th></th>
+    <th style="height: 50px;">محصول</th>
+    <th>قیمت</th>
+  </tr>
+  @for (item of basket2.basket; track $index) {
+  <tr>
+    <th><a (click)="basket2.onbuy(item)" >❌</a></th>
+    <th class="images"><img src="/img-product/{{item.pic}}" alt=""></th>
+    <th class="t2" >{{item.title}}</th>
+    <th>{{item.price  |number}}</th>
+  </tr>
+  }
+  <!-- <tr class="tr1" >
+      <button style="height: 60px;" >اقدام به خرید</button>
+  </tr> -->
+</table>
+}
+
+
+<!-- <div class="product">
+  <div class="images">
+    <img src="/img-product/{{item.pic}}" alt="">
+  </div>
+  <div class="title1">
+    {{item.title}}
+  </div>
+  <div class="price">
+    {{item.price | number}} تومان
+  </div>
+  <button (click)="basket2.onbuy(item)">delete</button>
+</div> -->

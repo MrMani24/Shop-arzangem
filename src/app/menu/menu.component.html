@@ -14,7 +14,10 @@
   </ul>
   <ul class="item2">
     <li class="Tn">09120000000 📞</li>
-    <li><button class="b1" (click)="toggleBasket()">🛒 سبد خرید</button></li>
+    <li><button class="b1" (click)="rout()">
+      <div class="n1" >{{n1.number}}</div>
+        🛒سبد خرید
+      </button></li>
     <li><button class="b2" (click)="ismenu = !ismenu"><img src="/images/berger.png"></button></li>
   </ul>
 </div>
@@ -27,7 +30,4 @@
   <li><a href="">درباره ما</a></li>
   <li><a href="">تماس باما</a></li>
 </ul>
-}
-@if (showBasket) {
-<app-basket></app-basket>
 }

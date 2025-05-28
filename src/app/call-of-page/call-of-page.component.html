@@ -3,7 +3,7 @@
   <h2>خرید سی پی کالاف دیوتی موبایل</h2>
 </div>
 <div class="product">
-  @for (item of products; track $index) {
-    <app-product (onBuy)="buy($event)" [product]="item" />
+  @for (item of sericesProducts.products; track $index) {
+  <app-product (onBuy)="buy($event)" [product]="item" />
   }
 </div>

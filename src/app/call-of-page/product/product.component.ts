@@ -11,7 +11,6 @@ export class ProductComponent {
   @Input() product: any;
   @Output() onBuy = new EventEmitter<any>();
   buy(P:any) {
-    console.log('Product clicked:', P);
     this.onBuy.emit(P);
   }
 }

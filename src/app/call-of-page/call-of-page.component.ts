@@ -1,7 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { ProductComponent } from "./product/product.component";
-import { DecimalPipe } from '@angular/common';
+import { BasketService } from '../+service/basket.service';
 
 @Component({
   selector: 'app-call-of-page',
@@ -30,8 +30,9 @@ export class CallOfPageComponent {
     { id:17 , title: "5000 سی پی کالاف موبایل", price: '4199000', pic: 'cp5000.png' },
     { id:18 , title: "10800 سی پی کالاف موبایل", price: '7999000', pic: 'cp10800.png' }
   ]
+  basketService = inject(BasketService)
+
   buy($event: any) {
-    this.basket.push($event)
+    this.basketService.addToBasket($event);
   }
-  basket: any[] = [];
 }

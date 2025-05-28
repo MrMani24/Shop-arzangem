@@ -1,0 +1,27 @@
+.basket-container {
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.basket-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.basket-table th, .basket-table td {
+  padding: 10px;
+  text-align: right;
+  border-bottom: 1px solid #ddd;
+}
+
+.basket-table th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+p {
+  text-align: center;
+  color: #888;
+}

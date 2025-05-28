@@ -4,15 +4,6 @@
 </div>
 <div class="product">
   @for (item of products; track $index) {
-  <app-product (onBuy)="buy($event)" [product]="item" />
+    <app-product (onBuy)="buy($event)" [product]="item" />
   }
-  <table style="width: 80%;">
-    @for (item of basket; track $index) {
-      <tr>
-        <th>{{item.id}}</th>
-        <th>{{item.title}}</th>
-        <th>{{item.price}}</th>
-      </tr>
-    }
-  </table>
 </div>

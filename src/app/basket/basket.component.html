@@ -1,0 +1,25 @@
+<div class="basket-container">
+  <h3>سبد خرید</h3>
+  @if (basket.length === 0) {
+    <p>سبد خرید خالی است!</p>
+  } @else {
+    <table class="basket-table">
+      <thead>
+        <tr>
+          <th>شناسه</th>
+          <th>عنوان</th>
+          <th>قیمت (تومان)</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (item of basket; track $index) {
+          <tr>
+            <td>{{item.id}}</td>
+            <td>{{item.title}}</td>
+            <td>{{item.price | number}}</td>
+          </tr>
+        }
+      </tbody>
+    </table>
+  }
+</div>

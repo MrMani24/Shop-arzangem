@@ -6,7 +6,10 @@ import { Injectable } from '@angular/core';
 export class ServiceBasketService {
   number = 0;
   onbuy(p: any) {
-    this.basket = this.basket.filter(m => m != p);
+    let a = this.basket.findIndex(m => m === p);
+    console.log(a);
+    this.basket.splice(a ,1);
+    // this.basket = this.basket.filter(m => m != p);
     this.number--;
   }
   products = [
